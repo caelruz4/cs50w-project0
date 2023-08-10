@@ -1,0 +1,306 @@
+// Tipo de fuente
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Yeseva+One&display=swap');
+
+$negro: #303841;
+$amarillo: #f8c22b;
+$amarillo-oscuro: #eeb822;
+$naranja: #FE724C;
+$gris-claro: #ededed;
+$blanco: #FFFF;
+$gris: gray;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: .5s linear; // Animación y transición
+}
+
+/* Color de la barra de scroll */
+
+::-webkit-scrollbar {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $amarillo;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $amarillo-oscuro;
+}
+
+html {
+    font-size: 55%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $blanco;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    /* Asegura que la navbar esté encima del contenido */
+
+
+    .logo {
+        // width: 4rem;
+        font-size: 3rem;
+        color: $negro;
+        font-weight: 700;
+    }
+
+    .logo:hover {
+        color: $negro;
+    }
+
+    a {
+        font-size: 2rem;
+        padding: 0 1.5rem;
+        color: $gris;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $amarillo;
+    }
+
+    #boton-toggler {
+        display: none; //El boton no se muestra, solo en pantallas pequeñas.
+    }
+
+    .fa-bars {
+        font-size: 3rem;
+        color: $negro;
+        border-radius: 5rem;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        border: .1rem $negro;
+        display: none;
+    }
+}
+
+// Para la imagen de inicio
+.imagen-principal {
+    background: url('static/slider-2.jpg')no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.imagen-principal::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); // opacidad de la imagen del fondo
+}
+
+.texto-central {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+
+    .titulo {
+        color: $blanco;
+        font-size: 55px;
+        font-weight: 600;
+    }
+
+    .sub-titulo {
+        color: $blanco;
+        font-size: 52px;
+        font-weight: 500;
+    }
+
+    .botones {
+        margin-top: 20px;
+
+        button {
+            height: 55px;
+            width: 170px;
+            border-radius: 5px;
+            border: none;
+            margin: 0 10px;
+            border: 2px solid $amarillo;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 0 10px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #primer-boton {
+            color: $amarillo;
+            background: none;
+        }
+
+        #primer-boton:hover {
+            background: $amarillo;
+            color: $blanco;
+        }
+
+        #segundo-boton {
+            background: $amarillo;
+            color: $blanco;
+        }
+    }
+}
+
+//   Area de sobre nosotros 
+.texto-grande {
+    padding-top: 20px;
+    font-size: 4rem;
+    font-weight: 600;
+    padding-bottom: 25px;
+    span {
+        text-decoration: underline $amarillo .8rem;
+    }
+}
+.sobre-nosotros {
+    padding: 30px 0;
+    text-align: center;
+
+    .contenido {
+        margin: 0 auto;
+        max-width: 1100px;
+
+        .texto-parrafo {
+            font-size: large;
+            text-transform: none;
+            text-align: justify;
+        }
+
+        .imagen-about-us {
+            width: 80%;
+        }
+
+        .boton {
+            $a: 5;
+            height: calc(55-a)px;
+            width: calc(165-a)px;
+            border-radius: 5px;
+            border: none;
+            margin-left: 0;
+            margin-top: 1rem;
+            border: 2px solid $amarillo-oscuro;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 0 10px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            color: $amarillo-oscuro;
+            background: none;
+            display: flex;
+        }
+        .boton:hover {
+            background: $amarillo-oscuro;
+            color: $blanco;
+        }
+
+    }
+}
+
+// Media queries - Responsividad Navbar
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+
+        header {
+            padding: 2rem;
+        }
+    }
+}
+
+
+// Oferta-Index
+.oferta {
+    background-color: $gris-claro;
+    margin-top: 5rem;
+    .card{
+        margin: 4rem;
+        .card-title {
+            font-size: 2rem;
+        }
+        .card-text {
+            font-size: large;
+        }
+        .boton {
+            background-color: $amarillo-oscuro;
+            border-color: $amarillo-oscuro;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        .fa-bars {
+            display: block;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            /* Centrar verticalmente */
+            padding: 1.5rem;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: $gris-claro;
+            border-top: .1rem $negro;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            a {
+                // Mostrarlo en forma de cajas.
+                margin: 1.5rem;
+                padding: 1.5rem;
+                background: $blanco;
+                border: .1rem $negro;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        #boton-toggler:checked~.navbar {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+    .card{
+        margin: auto;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 45%;
+    }
+}

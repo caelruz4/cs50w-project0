@@ -1,0 +1,262 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Yeseva+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: 0.5s linear;
+}
+
+/* Color de la barra de scroll */
+::-webkit-scrollbar {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f8c22b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #eeb822;
+}
+
+html {
+  font-size: 55%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  /* Asegura que la navbar esté encima del contenido */
+}
+header .logo {
+  font-size: 3rem;
+  color: #303841;
+  font-weight: 700;
+}
+header .logo:hover {
+  color: #303841;
+}
+header a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: gray;
+  text-decoration: none;
+}
+header a:hover {
+  color: #f8c22b;
+}
+header #boton-toggler {
+  display: none;
+}
+header .fa-bars {
+  font-size: 3rem;
+  color: #303841;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 0.1rem #303841;
+  display: none;
+}
+
+.imagen-principal {
+  background: url("static/slider-2.jpg") no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.imagen-principal::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.texto-central {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.texto-central .titulo {
+  color: white;
+  font-size: 55px;
+  font-weight: 600;
+}
+.texto-central .sub-titulo {
+  color: white;
+  font-size: 52px;
+  font-weight: 500;
+}
+.texto-central .botones {
+  margin-top: 20px;
+}
+.texto-central .botones button {
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid #f8c22b;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.texto-central .botones #primer-boton {
+  color: #f8c22b;
+  background: none;
+}
+.texto-central .botones #primer-boton:hover {
+  background: #f8c22b;
+  color: white;
+}
+.texto-central .botones #segundo-boton {
+  background: #f8c22b;
+  color: white;
+}
+
+.texto-grande {
+  padding-top: 20px;
+  font-size: 4rem;
+  font-weight: 600;
+  padding-bottom: 25px;
+}
+.texto-grande span {
+  text-decoration: underline #f8c22b 0.8rem;
+}
+
+.sobre-nosotros {
+  padding: 30px 0;
+  text-align: center;
+}
+.sobre-nosotros .contenido {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.sobre-nosotros .contenido .texto-parrafo {
+  font-size: large;
+  text-transform: none;
+  text-align: justify;
+}
+.sobre-nosotros .contenido .imagen-about-us {
+  width: 80%;
+}
+.sobre-nosotros .contenido .boton {
+  height: 55-a px;
+  width: 165-a px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 0;
+  margin-top: 1rem;
+  border: 2px solid #eeb822;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  color: #eeb822;
+  background: none;
+  display: flex;
+}
+.sobre-nosotros .contenido .boton:hover {
+  background: #eeb822;
+  color: white;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  html header {
+    padding: 2rem;
+  }
+}
+.oferta {
+  background-color: #ededed;
+  margin-top: 5rem;
+}
+.oferta .card {
+  margin: 4rem;
+}
+.oferta .card .card-title {
+  font-size: 2rem;
+}
+.oferta .card .card-text {
+  font-size: large;
+}
+.oferta .card .boton {
+  background-color: #eeb822;
+  border-color: #eeb822;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  header .fa-bars {
+    display: block;
+  }
+  header .logo {
+    display: flex;
+    align-items: center;
+    /* Centrar verticalmente */
+    padding: 1.5rem;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ededed;
+    border-top: 0.1rem #303841;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    border: 0.1rem #303841;
+    display: block;
+    width: 100%;
+  }
+  header #boton-toggler:checked ~ .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .card {
+    margin: auto;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
