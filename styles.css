@@ -146,14 +146,14 @@ header .fa-bars {
   color: white;
 }
 
-.texto-grande, .horarios-de-atencion .subtitulo-section {
+.texto-grande, .subtitulo-section, .ubicacion .subtitulo-ubicacion {
   padding-top: 20px;
   font-size: 4rem;
   font-weight: 600;
   padding-bottom: 25px;
   z-index: 1000;
 }
-.texto-grande span, .horarios-de-atencion .subtitulo-section span {
+.texto-grande span, .subtitulo-section span, .ubicacion .subtitulo-ubicacion span {
   -webkit-text-decoration: underline #f8c22b 0.8rem;
           text-decoration: underline #f8c22b 0.8rem;
 }
@@ -242,22 +242,24 @@ header .fa-bars {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Opacidad del fondo */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Opacidad del fondo */
 }
 .visitanos:before span {
   position: inherit;
+}
+
+.subtitulo-section, .ubicacion .subtitulo-ubicacion {
+  text-transform: capitalize;
+  color: white;
+  padding-top: 20px;
+  font-size: 30px;
 }
 
 .horarios-de-atencion {
   background-color: #252a31;
   padding-bottom: 7rem;
   padding-top: 2rem;
-}
-.horarios-de-atencion .subtitulo-section {
-  text-transform: capitalize;
-  color: white;
-  padding-top: 20px;
-  font-size: 30px;
 }
 .horarios-de-atencion .tabla-atencion {
   background-color: white;
@@ -268,6 +270,41 @@ header .fa-bars {
   display: grid;
   align-items: center;
   border-radius: 0px;
+}
+
+.ubicacion {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.ubicacion .subtitulo-ubicacion h3 {
+  color: #303841;
+  font-size: 35px;
+}
+.ubicacion .subtitulo-ubicacion h2 {
+  margin-top: -3rem;
+  color: #eeb822;
+  font-size: 25px;
+}
+.ubicacion .mapa {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-color: #303841;
+}
+.ubicacion .col-lg-4 .cuadrito-con-texto p {
+  text-transform: none;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size: large;
+  border-style: solid;
+  border-width: 1.8px;
+  padding: 10%;
+  border-color: #303841;
 }
 
 @media (max-width: 991px) {

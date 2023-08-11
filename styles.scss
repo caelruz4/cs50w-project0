@@ -178,9 +178,11 @@ header {
     font-size: 4rem;
     font-weight: 600;
     padding-bottom: 25px;
+
     span {
         text-decoration: underline $amarillo .8rem;
     }
+
     z-index: 1000;
 }
 
@@ -272,11 +274,13 @@ header {
     height: 300px;
     position: relative;
     background: url(static/visitanos-header.jpg) center/cover no-repeat;
+
     span {
         color: $blanco;
         position: relative;
         align-items: center;
     }
+
     &:before {
         content: "";
         position: absolute;
@@ -284,25 +288,29 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Opacidad del fondo */
+        background-color: rgba(0, 0, 0, 0.5);
+
+        /* Opacidad del fondo */
         span {
             position: inherit;
         }
     }
 }
 
-.horarios-de-atencion{
+.subtitulo-section {
+    @extend .texto-grande;
+    text-transform: capitalize;
+    color: $blanco;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.horarios-de-atencion {
     @extend .platos-fuertes;
     background-color: #252a31;
     padding-bottom: 7rem;
     padding-top: 2rem;
-    .subtitulo-section {
-        @extend .texto-grande;
-        text-transform: capitalize;
-        color: $blanco;
-        padding-top: 20px;
-        font-size: 30px;
-    }
+
     .tabla-atencion {
         background-color: $blanco;
         padding: 3%;
@@ -312,6 +320,50 @@ header {
         display: grid;
         align-items: center;
         border-radius: 0px;
+    }
+}
+
+.ubicacion {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    .subtitulo-ubicacion {
+        @extend .subtitulo-section;
+
+        h3 {
+            color: $negro;
+            font-size: 35px;
+
+        }
+        h2 {
+            margin-top: -3rem;
+            color: $amarillo-oscuro;
+            font-size: 25px;
+        }
+    }
+
+    .mapa {
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        border-color: #303841;
+    }
+
+    .col-lg-4 .cuadrito-con-texto {
+        p {
+            text-transform: none;
+            margin-left: 5%;
+            margin-right: 5%;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+            font-size: large;
+            border-style: solid;
+            border-width: 1.8px;
+            padding: 10%;
+            border-color: $negro;
+        }
     }
 }
 
@@ -371,11 +423,13 @@ header {
     .card {
         margin: auto;
     }
+
     .visitanos {
         height: 200px;
+
         span {
             position: relative;
-                }
+        }
     }
 }
 
