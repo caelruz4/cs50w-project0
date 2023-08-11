@@ -20,6 +20,12 @@ $gris: gray;
     transition: .5s linear; // Animación y transición
 }
 
+.after-nav {
+    /* Todas las primeras secciones despues del navbar
+    para no tapar este contenido */
+    padding-top: 80px;
+}
+
 /* Color de la barra de scroll */
 
 ::-webkit-scrollbar {
@@ -175,7 +181,9 @@ header {
     span {
         text-decoration: underline $amarillo .8rem;
     }
+    z-index: 1000;
 }
+
 .sobre-nosotros {
     padding: 30px 0;
     text-align: center;
@@ -213,11 +221,97 @@ header {
             background: none;
             display: flex;
         }
+
         .boton:hover {
             background: $amarillo-oscuro;
             color: $blanco;
         }
 
+    }
+}
+
+
+
+
+// Oferta-Index
+.oferta {
+    background-color: $gris-claro;
+    margin-top: 5rem;
+
+    .card {
+        margin: 4rem;
+
+        .card-title {
+            font-size: 2rem;
+        }
+
+        .card-text {
+            font-size: large;
+        }
+
+        .boton {
+            background-color: $amarillo-oscuro;
+            border-color: $amarillo-oscuro;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// Seccion de menús
+.platos-fuertes {
+    transition: none;
+    background-color: $gris-claro;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.visitanos {
+    @extend .platos-fuertes;
+    transition: linear;
+    margin-top: 60px;
+    height: 300px;
+    position: relative;
+    background: url(static/visitanos-header.jpg) center/cover no-repeat;
+    span {
+        color: $blanco;
+        position: relative;
+        align-items: center;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Opacidad del fondo */
+        span {
+            position: inherit;
+        }
+    }
+}
+
+.horarios-de-atencion{
+    @extend .platos-fuertes;
+    background-color: #252a31;
+    padding-bottom: 7rem;
+    padding-top: 2rem;
+    .subtitulo-section {
+        @extend .texto-grande;
+        text-transform: capitalize;
+        color: $blanco;
+        padding-top: 20px;
+        font-size: 30px;
+    }
+    .tabla-atencion {
+        background-color: $blanco;
+        padding: 3%;
+        margin-right: 15%;
+        margin-left: 15%;
+        font-size: large;
+        display: grid;
+        align-items: center;
+        border-radius: 0px;
     }
 }
 
@@ -228,27 +322,6 @@ header {
 
         header {
             padding: 2rem;
-        }
-    }
-}
-
-
-// Oferta-Index
-.oferta {
-    background-color: $gris-claro;
-    margin-top: 5rem;
-    .card{
-        margin: 4rem;
-        .card-title {
-            font-size: 2rem;
-        }
-        .card-text {
-            font-size: large;
-        }
-        .boton {
-            background-color: $amarillo-oscuro;
-            border-color: $amarillo-oscuro;
-            font-size: 1.5rem;
         }
     }
 }
@@ -294,8 +367,15 @@ header {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         }
     }
-    .card{
+
+    .card {
         margin: auto;
+    }
+    .visitanos {
+        height: 200px;
+        span {
+            position: relative;
+                }
     }
 }
 

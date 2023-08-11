@@ -11,6 +11,12 @@
   transition: 0.5s linear;
 }
 
+.after-nav {
+  /* Todas las primeras secciones despues del navbar
+  para no tapar este contenido */
+  padding-top: 80px;
+}
+
 /* Color de la barra de scroll */
 ::-webkit-scrollbar {
   background-color: #f1f1f1;
@@ -140,14 +146,16 @@ header .fa-bars {
   color: white;
 }
 
-.texto-grande {
+.texto-grande, .horarios-de-atencion .subtitulo-section {
   padding-top: 20px;
   font-size: 4rem;
   font-weight: 600;
   padding-bottom: 25px;
+  z-index: 1000;
 }
-.texto-grande span {
-  text-decoration: underline #f8c22b 0.8rem;
+.texto-grande span, .horarios-de-atencion .subtitulo-section span {
+  -webkit-text-decoration: underline #f8c22b 0.8rem;
+          text-decoration: underline #f8c22b 0.8rem;
 }
 
 .sobre-nosotros {
@@ -189,14 +197,6 @@ header .fa-bars {
   color: white;
 }
 
-@media (max-width: 991px) {
-  html {
-    font-size: 55%;
-  }
-  html header {
-    padding: 2rem;
-  }
-}
 .oferta {
   background-color: #ededed;
   margin-top: 5rem;
@@ -216,6 +216,68 @@ header .fa-bars {
   font-size: 1.5rem;
 }
 
+.platos-fuertes, .horarios-de-atencion, .visitanos {
+  transition: none;
+  background-color: #ededed;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.visitanos {
+  transition: linear;
+  margin-top: 60px;
+  height: 300px;
+  position: relative;
+  background: url(static/visitanos-header.jpg) center/cover no-repeat;
+}
+.visitanos span {
+  color: white;
+  position: relative;
+  align-items: center;
+}
+.visitanos:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad del fondo */
+}
+.visitanos:before span {
+  position: inherit;
+}
+
+.horarios-de-atencion {
+  background-color: #252a31;
+  padding-bottom: 7rem;
+  padding-top: 2rem;
+}
+.horarios-de-atencion .subtitulo-section {
+  text-transform: capitalize;
+  color: white;
+  padding-top: 20px;
+  font-size: 30px;
+}
+.horarios-de-atencion .tabla-atencion {
+  background-color: white;
+  padding: 3%;
+  margin-right: 15%;
+  margin-left: 15%;
+  font-size: large;
+  display: grid;
+  align-items: center;
+  border-radius: 0px;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  html header {
+    padding: 2rem;
+  }
+}
 @media (max-width: 768px) {
   html {
     font-size: 50%;
@@ -236,7 +298,8 @@ header .fa-bars {
     right: 0;
     background: #ededed;
     border-top: 0.1rem #303841;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   header .navbar a {
     margin: 1.5rem;
@@ -247,16 +310,21 @@ header .fa-bars {
     width: 100%;
   }
   header #boton-toggler:checked ~ .navbar {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
   .card {
     margin: auto;
+  }
+  .visitanos {
+    height: 200px;
+  }
+  .visitanos span {
+    position: relative;
   }
 }
 @media (max-width: 450px) {
   html {
     font-size: 45%;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
