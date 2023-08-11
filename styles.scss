@@ -7,6 +7,7 @@ $amarillo-oscuro: #eeb822;
 $naranja: #FE724C;
 $gris-claro: #ededed;
 $blanco: #FFFF;
+$dorado: #f3ca88cc;
 $gris: gray;
 
 * {
@@ -367,6 +368,63 @@ header {
     }
 }
 
+//Sobre nosotros
+.sobre-nosotros-header {
+    @extend .visitanos;
+    background: url(static/sobre-nosotros-header.jpg) center/cover no-repeat;
+}
+.contenido-about-us{
+    margin-top: 8rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    font-size: 18px;
+    p {
+        text-transform: none;
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+}
+.contenido-about-us-interno {
+    background-color:rgb(247, 239, 216);
+    margin-top: 5rem;
+    .imagen {
+        margin-left: 10rem;
+        margin-top: 3rem;
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .texto {
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 3rem;
+        }
+        p{
+            text-transform: none;
+        }
+        margin-top: 4rem;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        text-align: justify;
+        padding-right: 7rem;
+    }
+    padding-bottom: 5rem;
+}
+.agradecimiento {
+height: 150px;
+margin-top: 5rem;
+span{
+    text-align: center;
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+    font-size: 25px;
+}
+}
 // Media queries - Responsividad Navbar
 @media (max-width:991px) {
     html {
@@ -429,6 +487,28 @@ header {
 
         span {
             position: relative;
+        }
+    }
+    .contenido-about-us{
+        margin-top: 2rem;
+        margin-left: 8rem;
+        margin-right: 8rem;
+        font-size: 16px;
+    }
+
+    .contenido-about-us-interno {
+        margin-left: 0;
+        .imagen {
+            margin: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            height: auto;
+        }
+        .texto{
+            margin-left: 4rem;
+            font-size: 16px;
         }
     }
 }

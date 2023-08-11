@@ -216,26 +216,26 @@ header .fa-bars {
   font-size: 1.5rem;
 }
 
-.platos-fuertes, .horarios-de-atencion, .visitanos {
+.platos-fuertes, .horarios-de-atencion, .visitanos, .sobre-nosotros-header {
   transition: none;
   background-color: #ededed;
   padding-left: 3rem;
   padding-right: 3rem;
 }
 
-.visitanos {
+.visitanos, .sobre-nosotros-header {
   transition: linear;
   margin-top: 60px;
   height: 300px;
   position: relative;
   background: url(static/visitanos-header.jpg) center/cover no-repeat;
 }
-.visitanos span {
+.visitanos span, .sobre-nosotros-header span {
   color: white;
   position: relative;
   align-items: center;
 }
-.visitanos:before {
+.visitanos:before, .sobre-nosotros-header:before {
   content: "";
   position: absolute;
   top: 0;
@@ -245,7 +245,7 @@ header .fa-bars {
   background-color: rgba(0, 0, 0, 0.5);
   /* Opacidad del fondo */
 }
-.visitanos:before span {
+.visitanos:before span, .sobre-nosotros-header:before span {
   position: inherit;
 }
 
@@ -307,6 +307,65 @@ header .fa-bars {
   border-color: #303841;
 }
 
+.sobre-nosotros-header {
+  background: url(static/sobre-nosotros-header.jpg) center/cover no-repeat;
+}
+
+.contenido-about-us {
+  margin-top: 8rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  font-size: 18px;
+}
+.contenido-about-us p {
+  text-transform: none;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.contenido-about-us-interno {
+  background-color: rgb(247, 239, 216);
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+}
+.contenido-about-us-interno .imagen {
+  margin-left: 10rem;
+  margin-top: 3rem;
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+.contenido-about-us-interno .texto {
+  margin-top: 4rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: justify;
+  padding-right: 7rem;
+}
+.contenido-about-us-interno .texto h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.contenido-about-us-interno .texto p {
+  text-transform: none;
+}
+
+.agradecimiento {
+  height: 150px;
+  margin-top: 5rem;
+}
+.agradecimiento span {
+  text-align: center;
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+  font-size: 25px;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -353,11 +412,32 @@ header .fa-bars {
   .card {
     margin: auto;
   }
-  .visitanos {
+  .visitanos, .sobre-nosotros-header {
     height: 200px;
   }
-  .visitanos span {
+  .visitanos span, .sobre-nosotros-header span {
     position: relative;
+  }
+  .contenido-about-us {
+    margin-top: 2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    font-size: 16px;
+  }
+  .contenido-about-us-interno {
+    margin-left: 0;
+  }
+  .contenido-about-us-interno .imagen {
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+  }
+  .contenido-about-us-interno .texto {
+    margin-left: 4rem;
+    font-size: 16px;
   }
 }
 @media (max-width: 450px) {
