@@ -14,7 +14,7 @@
 .after-nav {
   /* Todas las primeras secciones despues del navbar
   para no tapar este contenido */
-  padding-top: 80px;
+  padding-top: 90px;
 }
 
 /* Color de la barra de scroll */
@@ -108,18 +108,19 @@ header .fa-bars {
 }
 .texto-central .titulo {
   color: white;
-  font-size: 55px;
+  font-size: 65px;
   font-weight: 600;
 }
 .texto-central .sub-titulo {
   color: white;
-  font-size: 52px;
+  font-size: 42px;
   font-weight: 500;
 }
 .texto-central .botones {
   margin-top: 20px;
 }
-.texto-central .botones button {
+.texto-central .botones a {
+  text-decoration: none;
   height: 55px;
   width: 170px;
   border-radius: 5px;
@@ -128,7 +129,7 @@ header .fa-bars {
   border: 2px solid #f8c22b;
   font-size: 20px;
   font-weight: 500;
-  padding: 0 10px;
+  padding: 0 20px;
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease;
@@ -167,7 +168,7 @@ header .fa-bars {
   max-width: 1100px;
 }
 .sobre-nosotros .contenido .texto-parrafo {
-  font-size: large;
+  font-size: 2rem;
   text-transform: none;
   text-align: justify;
 }
@@ -176,7 +177,7 @@ header .fa-bars {
 }
 .sobre-nosotros .contenido .boton {
   height: 55-a px;
-  width: 165-a px;
+  width: 12rem;
   border-radius: 5px;
   border: none;
   margin-left: 0;
@@ -213,29 +214,66 @@ header .fa-bars {
 .oferta .card .boton {
   background-color: #eeb822;
   border-color: #eeb822;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
-.platos-fuertes, .horarios-de-atencion, .visitanos, .sobre-nosotros-header {
+.menus {
+  max-height: 220px;
+  background: url(static/visitanos-header.jpg) center/cover no-repeat;
+}
+
+.platos-fuertes, .horarios-de-atencion, .visitanos, .sobre-nosotros-header, .menus {
   transition: none;
   background-color: #ededed;
   padding-left: 3rem;
   padding-right: 3rem;
+  margin-top: -3rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.platos-fuertes .contenido, .horarios-de-atencion .contenido, .visitanos .contenido, .sobre-nosotros-header .contenido, .menus .contenido {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.platos-fuertes .contenido .row .col-md-4 .card, .horarios-de-atencion .contenido .row .col-md-4 .card, .visitanos .contenido .row .col-md-4 .card, .sobre-nosotros-header .contenido .row .col-md-4 .card, .menus .contenido .row .col-md-4 .card {
+  max-width: 300px;
+  height: 470px;
+}
+.platos-fuertes .contenido .row .col-md-4 .card h5, .horarios-de-atencion .contenido .row .col-md-4 .card h5, .visitanos .contenido .row .col-md-4 .card h5, .sobre-nosotros-header .contenido .row .col-md-4 .card h5, .menus .contenido .row .col-md-4 .card h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.platos-fuertes .contenido .row .col-md-4 .card p, .horarios-de-atencion .contenido .row .col-md-4 .card p, .visitanos .contenido .row .col-md-4 .card p, .sobre-nosotros-header .contenido .row .col-md-4 .card p, .menus .contenido .row .col-md-4 .card p {
+  font-size: 14px;
+  text-align: left;
+  text-transform: none;
+  padding: 2%;
+}
+.platos-fuertes .contenido .row .col-md-4 .card button, .horarios-de-atencion .contenido .row .col-md-4 .card button, .visitanos .contenido .row .col-md-4 .card button, .sobre-nosotros-header .contenido .row .col-md-4 .card button, .menus .contenido .row .col-md-4 .card button {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #FE724C;
+  border-color: #FE724C;
 }
 
-.visitanos, .sobre-nosotros-header {
+.card-text {
+  text-transform: none;
+}
+
+.visitanos, .sobre-nosotros-header, .menus {
   transition: linear;
   margin-top: 60px;
   height: 300px;
   position: relative;
   background: url(static/visitanos-header.jpg) center/cover no-repeat;
 }
-.visitanos span, .sobre-nosotros-header span {
+.visitanos span, .sobre-nosotros-header span, .menus span {
   color: white;
   position: relative;
   align-items: center;
 }
-.visitanos:before, .sobre-nosotros-header:before {
+.visitanos:before, .sobre-nosotros-header:before, .menus:before {
   content: "";
   position: absolute;
   top: 0;
@@ -245,7 +283,7 @@ header .fa-bars {
   background-color: rgba(0, 0, 0, 0.5);
   /* Opacidad del fondo */
 }
-.visitanos:before span, .sobre-nosotros-header:before span {
+.visitanos:before span, .sobre-nosotros-header:before span, .menus:before span {
   position: inherit;
 }
 
@@ -366,6 +404,29 @@ header .fa-bars {
   font-size: 25px;
 }
 
+footer {
+  background-color: #303841;
+  color: white;
+  padding: 20px 0;
+  padding-top: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  transition: none;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 1rem;
+}
+footer a:hover {
+  color: #f8c22b;
+}
+
+.social-icons {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -412,10 +473,10 @@ header .fa-bars {
   .card {
     margin: auto;
   }
-  .visitanos, .sobre-nosotros-header {
+  .visitanos, .menus, .sobre-nosotros-header {
     height: 200px;
   }
-  .visitanos span, .sobre-nosotros-header span {
+  .visitanos span, .menus span, .sobre-nosotros-header span {
     position: relative;
   }
   .contenido-about-us {

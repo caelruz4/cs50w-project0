@@ -24,7 +24,7 @@ $gris: gray;
 .after-nav {
     /* Todas las primeras secciones despues del navbar
     para no tapar este contenido */
-    padding-top: 80px;
+    padding-top: 90px;
 }
 
 /* Color de la barra de scroll */
@@ -128,20 +128,21 @@ header {
 
     .titulo {
         color: $blanco;
-        font-size: 55px;
+        font-size: 65px;
         font-weight: 600;
     }
 
     .sub-titulo {
         color: $blanco;
-        font-size: 52px;
+        font-size: 42px;
         font-weight: 500;
     }
 
     .botones {
         margin-top: 20px;
 
-        button {
+        a {
+            text-decoration: none;
             height: 55px;
             width: 170px;
             border-radius: 5px;
@@ -150,7 +151,7 @@ header {
             border: 2px solid $amarillo;
             font-size: 20px;
             font-weight: 500;
-            padding: 0 10px;
+            padding: 0 20px;
             cursor: pointer;
             outline: none;
             transition: all 0.3s ease;
@@ -196,7 +197,7 @@ header {
         max-width: 1100px;
 
         .texto-parrafo {
-            font-size: large;
+            font-size: 2rem;
             text-transform: none;
             text-align: justify;
         }
@@ -208,7 +209,7 @@ header {
         .boton {
             $a: 5;
             height: calc(55-a)px;
-            width: calc(165-a)px;
+            width: 12rem;
             border-radius: 5px;
             border: none;
             margin-left: 0;
@@ -255,19 +256,61 @@ header {
         .boton {
             background-color: $amarillo-oscuro;
             border-color: $amarillo-oscuro;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     }
 }
 
 // Seccion de menús
+
+.menus{
+    @extend .visitanos;
+    max-height: 220px;
+    background: url(static/visitanos-header.jpg) center/cover no-repeat;
+
+}
 .platos-fuertes {
     transition: none;
     background-color: $gris-claro;
     padding-left: 3rem;
     padding-right: 3rem;
-}
+    margin-top: -3rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    .contenido {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        .row {
+            .col-md-4{
+                .card {
+                    max-width: 300px;
+                    height: 470px;
+                    h5 {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
 
+                    p {
+                        font-size: 14px;
+                        text-align: left;
+                        text-transform: none;
+                        padding: 2%;
+                    }
+                    button {
+                        font-size: 16px;
+                        font-weight: 500;
+                        background-color: $naranja;
+                        border-color: $naranja;
+                    }
+                }
+            }
+        }
+    }
+}
+.card-text {
+    text-transform: none;
+}
 .visitanos {
     @extend .platos-fuertes;
     transition: linear;
@@ -425,6 +468,29 @@ span{
     font-size: 25px;
 }
 }
+
+footer {
+    background-color: $negro;
+    color: $blanco;
+    padding: 20px 0;
+    padding-top: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    transition: none;
+    a {
+        color: $blanco;
+        text-decoration: none;
+        margin: 1rem;
+    }
+    a:hover {
+        color:$amarillo;
+    }
+  }
+  .social-icons {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
 // Media queries - Responsividad Navbar
 @media (max-width:991px) {
     html {
