@@ -200,6 +200,7 @@ header {
             font-size: 2rem;
             text-transform: none;
             text-align: justify;
+            margin: 2rem;
         }
 
         .imagen-about-us {
@@ -212,7 +213,7 @@ header {
             width: 12rem;
             border-radius: 5px;
             border: none;
-            margin-left: 0;
+            margin-left: 2rem;
             margin-top: 1rem;
             border: 2px solid $amarillo-oscuro;
             font-size: 18px;
@@ -240,11 +241,13 @@ header {
 // Oferta-Index
 .oferta {
     background-color: $gris-claro;
-    margin-top: 5rem;
-
+    .cards-oferta {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem;
+    }
     .card {
-        margin: 4rem;
-
         .card-title {
             font-size: 2rem;
         }
@@ -506,7 +509,16 @@ footer {
     html {
         font-size: 50%;
     }
-
+    .sobre-nosotros .contenido .texto-parrafo {
+        margin: 5rem;
+    }
+    .sobre-nosotros .contenido .boton {
+        margin: 5rem;
+        width: 18rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        text-align: center;
+    }
     header {
         .fa-bars {
             display: block;

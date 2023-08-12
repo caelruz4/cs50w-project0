@@ -171,6 +171,7 @@ header .fa-bars {
   font-size: 2rem;
   text-transform: none;
   text-align: justify;
+  margin: 2rem;
 }
 .sobre-nosotros .contenido .imagen-about-us {
   width: 80%;
@@ -180,7 +181,7 @@ header .fa-bars {
   width: 12rem;
   border-radius: 5px;
   border: none;
-  margin-left: 0;
+  margin-left: 2rem;
   margin-top: 1rem;
   border: 2px solid #eeb822;
   font-size: 18px;
@@ -200,10 +201,12 @@ header .fa-bars {
 
 .oferta {
   background-color: #ededed;
-  margin-top: 5rem;
 }
-.oferta .card {
-  margin: 4rem;
+.oferta .cards-oferta {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
 }
 .oferta .card .card-title {
   font-size: 2rem;
@@ -438,6 +441,16 @@ footer a:hover {
 @media (max-width: 768px) {
   html {
     font-size: 50%;
+  }
+  .sobre-nosotros .contenido .texto-parrafo {
+    margin: 5rem;
+  }
+  .sobre-nosotros .contenido .boton {
+    margin: 5rem;
+    width: 18rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
   }
   header .fa-bars {
     display: block;
