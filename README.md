@@ -3,7 +3,7 @@ Web Programming with Python and JavaScript
 
 # Proyecto 0: "El Rinconcito" - README
 
-Repositorio Proyect 0 WEB50- Y23-C2
+Repositorio Project 0 WEB50- Y23-C2
 
 ## Descripción
 
